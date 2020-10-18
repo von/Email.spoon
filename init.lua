@@ -3,6 +3,15 @@
 --- An interface to creating and sending emails and email applications.
 local Email = {}
 
+-- Metadata {{{ --
+Contexts.name="Email"
+Contexts.version="0.0"
+Contexts.author="Von Welch"
+-- https://opensource.org/licenses/Apache-2.0
+Contexts.license="Apache-2.0"
+Contexts.homepage="https://github.com/von/Email.spoon"
+-- }}} Metadata --
+
 -- Failed table lookups on the instances should fallback to the class table, to get methods
 Email.__index = Email
 
