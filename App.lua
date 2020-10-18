@@ -82,8 +82,10 @@ function App:executeApplescript(script)
   self.log.d("Executing script:" .. script)
   local success, obj, output = hs.osascript.applescript(script)
   if not success then
-    self.log.e("Mail composition script failed")
-    self.log.d(hs.inspect(output))
+    hs.alert("Mail composition script failed")
+    self.log.e(output.OSAScriptErrorMessageKey)
+    self.log.e("Script: ")
+    self.log.e(script)
     return false
   end
   self.log.d("Success.")
