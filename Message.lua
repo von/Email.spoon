@@ -24,6 +24,21 @@ setmetatable(Message, {
 -- Set up logger
 Message.log = hs.logger.new("Message")
 
+-- urlencode()
+-- Encode a string for inclusion in a URL.
+-- Kudos: https://gist.github.com/liukun/f9ce7d6d14fa45fe9b924a3eed5c3d99
+--
+-- Parameters:
+-- * `s`: string to encode
+--
+-- Reutnes:
+-- * Encoded string
+local function urlencode(s)
+  s = string.gsub(s, "\n", "\r\n")
+  s = string.gsub(s, "([^%w])", function (c) return string.format("%%%02X", string.byte(c)) end)
+  return s
+end
+
 --- Email.Message:debug()
 --- Method
 --- Enable or disable debugging
@@ -102,9 +117,43 @@ function Message.fromFile(path)
   -- Parse content
   values.content = ""
   for line in lines do
-    values.content = email.content .. line
+    values.content = values.content .. line .. "\n"
   end
-  return Email.new(values)
+  return Message.new(values)
+end
+
+--- Message:toURL()
+--- Method
+--- Return the mail message as a `mailto:` URL.
+--- Does not support `from` or `attachment`s.
+---
+--- Parameters:
+--- * None
+---
+--- Returns:
+--- * URL as a string
+function Message:toURL()
+  local url = "mailto:"
+  if self.to then
+    url = url .. table.concat(self.to, ",")
+  end
+  local queries = {}
+  if self.subject then
+    table.insert(queries, "subject=" .. urlencode(self.subject))
+  end
+  if self.cc then
+    table.insert(queries, "cc=" .. table.concat(self.cc, ","))
+  end
+  if self.bcc then
+    table.insert(queries, "bcc=" .. table.concat(self.bcc, ","))
+  end
+  if self.content then
+    table.insert(queries, "body=" .. urlencode(self.content))
+  end
+  if #queries > 0 then
+    url = url .. "?" .. table.concat(queries, "&")
+  end
+  return url
 end
 
 return Message
