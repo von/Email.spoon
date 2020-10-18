@@ -47,13 +47,13 @@ function AppleMail:compose(mail)
   self.log.d("AppleMail:compose() called.")
   local properties = "visible:true, subject:"
   if mail.subject then
-    properties = properties .. "\"" .. mail.subject .. "\""
+    properties = properties .. "\"" .. self:escapeApplescriptString(mail.subject) .. "\""
   end
   if mail.from then
     properties = properties .. ", sender:\"" .. mail.from .. "\""
   end
   if mail.content then
-    properties = properties .. ", content:\"" .. self:escapeString(mail.content) .. "\""
+    properties = properties .. ", content:\"" .. self:escapeApplescriptString(mail.content) .. "\""
   end
   local tell_cmds = {}
   if mail.to then
@@ -68,8 +68,7 @@ function AppleMail:compose(mail)
   if mail.attachment then
     hs.fnutils.each(mail.attachment, function(path) table.insert(tell_cmds, "make new attachment at newMessage with properties {file name:\"" .. self:escapeApplescriptString(path) .. "\"}") end)
   end
-  local tell_cmd_str = ""
-  hn.fnutils(tell_cmds, function(c) tell_cmd_str = tell_cmd_str .. c .. "\n" end)
+  local tell_cmd_str = table.concat(tell_cmds, "\n")
   local script = string.format([[
     tell application "Mail"
       set newMessage to make new outgoing message with properties {%s}
