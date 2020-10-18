@@ -38,34 +38,34 @@ function Outlook:compose(mail)
   self.log.d("Outlook:compose() called.")
   local properties = "subject:"
   if mail.subject then
-    properties = properties .. "\"" .. mail.subject .. "\""
+    properties = properties .. "\"" .. self:escapeApplescriptString(mail.subject) .. "\""
   end
   if mail.from then
     properties = properties .. ", sender:\"" .. mail.from .. "\""
   end
   if mail.content then
-    properties = properties .. ", plain text content:\"" .. self:scapeApplescriptString(mail.content) .. "\""
+    properties = properties .. ", plain text content:\"" .. self:escapeApplescriptString(mail.content) .. "\""
   end
+  local emailToStr = function(addr) return string.format("{email address:{address:\"%s\"}}", self:escapeApplescriptString(addr)) end
   local tell_cmds = {}
   if mail.to then
-    hs.fnutils.each(mail.to, function(addr) table.insert(tell_cmds, "make new to recipient at newMessage with properties {address:\"" .. self:escapeApplescriptString(addr) .. "\"}") end)
+    hs.fnutils.each(mail.to, function(addr) table.insert(tell_cmds, "make new to recipient at newMessage with properties " .. emailToStr(addr)) end)
   end
   if mail.cc then
-    hs.fnutils.each(mail.cc, function(addr) table.insert(tell_cmds, "make new cc recipient at newMessage with properties {address:\"" .. self:escapeApplescriptString(addr) .. "\"}") end)
+    hs.fnutils.each(mail.cc, function(addr) table.insert(tell_cmds, "make new cc recipient at newMessage with properties " .. emailToStr(addr)) end)
   end
   if mail.bcc then
-    hs.fnutils.each(mail.bcc, function(addr) table.insert(tell_cmds, "make new bcc recipient at newMessage with properties {address:\"" .. self:escapeApplescriptString(addr) .. "\"}") end)
+    hs.fnutils.each(mail.bcc, function(addr) table.insert(tell_cmds, "make new bcc recipient at newMessage with properties " .. emailToStr(addr)) end)
   end
   if mail.attachment then
     hs.fnutils.each(mail.attachment, function(path) table.insert(tell_cmds, "make new attachment at newMessage with properties {file name:\"" .. self:escapeApplescriptString(path) .. "\"}") end)
   end
-  local tell_cmd_str = ""
-  hn.fnutils(tell_cmds, function(c) tell_cmd_str = tell_cmd_str .. c .. "\n" end)
+  local tell_cmd_str = table.concat(tell_cmds, "\n")
   local script = string.format([[
     tell application "Outlook"
-      set theMessage to make new outgoing message with properties {%s}
+      set newMessage to make new outgoing message with properties {%s}
       %s
-      open theMessage
+      open newMessage
       activate
     end tell
   ]], properties, tell_cmd_str)
