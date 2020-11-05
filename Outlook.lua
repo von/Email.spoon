@@ -242,5 +242,32 @@ function Outlook:forward()
 end
 -- }}} forward() --
 
+-- focusOnCalendar() {{{ --
+--- Email.Outlook:focusOnCalendar()
+--- Method
+--- Focus on the calendar window.
+---
+--- Parameters:
+--- * None
+---
+--- Returns:
+--- * True on success, false on failure
+function Outlook:focusOnCalendar()
+  self.log.d("Focusing on Calendar")
+  local outlook = hs.application.find(self.AppId)
+  if not outlook then
+    self.log.e("Could not find Outlook application")
+    return false
+  end
+  local win = outlook:findWindow("Calendar")
+  if not win then
+    self.log.e("Could not find Calendar window")
+    return false
+  end
+  win:focus()
+  return true
+end
+-- }}} focusOnCalendar()
+
 return Outlook
 -- vim: foldmethod=marker: --
