@@ -242,6 +242,29 @@ function Outlook:forward()
 end
 -- }}} forward() --
 
+-- delete() {{{ --
+--- Email.Outlook:delete()
+--- Method
+--- Delete current message
+---
+--- Parameters:
+--- * None
+---
+--- Returns:
+--- * Nothing
+function Outlook:delete()
+  self.log.d("Deleting message")
+  local outlook = hs.application.find(self.AppId)
+  if not outlook then
+    self.log.e("Could not find Outlook application")
+    return
+  end
+  if not outlook:selectMenuItem({"Edit", "Delete"}) then
+    self.log.f("Failed to delete message")
+  end
+end
+-- }}} delete() --
+
 -- focusOnCalendar() {{{ --
 --- Email.Outlook:focusOnCalendar()
 --- Method
