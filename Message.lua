@@ -99,7 +99,7 @@ function Message.fromFile(path)
     end
     local field, value = string.match(line, "^(%a+): (.*)$")
     if not field or not value then
-      self.log.ef("Failed to parse header: %s", line)
+      Message.log.ef("Failed to parse header: %s", line)
     else
       field = string.lower(field)
       if field == "to" or field == "cc" or field == "bcc" then
