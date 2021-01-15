@@ -90,11 +90,23 @@ function Message.fromFile(path)
     self.log.ef("Failed to read %s", path)
     return nil
   end
+  local atEOF = false
+
   local values = {}
+  values.to = {}
+  values.subject = ""
+  values.content = ""
+
   -- Parse headers
   while true do
     local line = lines()
+    -- Blank line == end of headers
     if line == "" then
+      break
+    end
+    -- nil == EOF
+    if line == nil then
+      atEOF = true
       break
     end
     local field, value = string.match(line, "^(%a+): (.*)$")
@@ -114,10 +126,11 @@ function Message.fromFile(path)
       end
     end
   end
-  -- Parse content
-  values.content = ""
-  for line in lines do
-    values.content = values.content .. line .. "\n"
+  if not atEOF then
+    -- Parse content
+    for line in lines do
+      values.content = values.content .. line .. "\n"
+    end
   end
   return Message.new(values)
 end
