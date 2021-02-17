@@ -115,6 +115,7 @@ function Outlook:moveToFolder(folder)
     -- Some versions of Outlook use "<foldername> (<email address>)"
     if not outlook:selectMenuItem(folder .. " \\(.*\\)", true) then
       self.log.f("Failed to move message to %s", folder)
+      hs.alert("Failed to move message to " .. folder)
     end
   end
 end
