@@ -18,12 +18,24 @@ setmetatable(Outlook, {
 
 Outlook.AppId = "com.microsoft.Outlook"
 
+-- new() {{{ --
+--- Email.Outlook.new()
+--- Constructor
+--- Create a new instance of an Outlook interface.
+---
+--- Parameters:
+--- * None
+---
+--- Returns:
+--- * Email.Outlook instance
 function Outlook.new()
   -- Create a new instance of superclass, but give it metatable of subclass
   local self = setmetatable(App.new(), Outlook)
   return self
 end
+-- }}} Outlook.new() --
 
+-- compose() {{{ --
 --- Email.Outlook:compose()
 --- Method
 --- Given an Email.Message instance, create new email comosition
@@ -71,6 +83,10 @@ function Outlook:compose(mail)
   ]], properties, tell_cmd_str)
   return self:executeApplescript(script)
 end
+-- }}} Email.Outlook:compose() --
+
+-- {{{ moveToArchive() --
+--- Email.Outlook:moveToArchive()
 --- Method
 --- Move current message to archive
 --- Uses Outlook's existing ^E shortcut
@@ -91,7 +107,7 @@ function Outlook:moveToArchive()
 end
 -- }}} moveToArchive --
 
--- moveToFolder {{{ --
+-- moveToFolder() {{{ --
 --- Email.Outlook:moveToFolder()
 --- Method
 --- Move current message to folder
