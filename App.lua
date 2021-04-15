@@ -50,7 +50,7 @@ end
 -- * Email.App instance.
 function App.new()
   App.log.d("new() called")
-  local self = setmetatable({}, Email)
+  local self = setmetatable({}, App)
   return self
 end
 
