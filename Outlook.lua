@@ -56,7 +56,11 @@ function Outlook:compose(mail)
     properties = properties .. ", sender:\"" .. mail.from .. "\""
   end
   if mail.content then
-    properties = properties .. ", plain text content:\"" .. self:escapeApplescriptString(mail.content) .. "\""
+    local content = self:escapeApplescriptString(mail.content)
+    -- Outlook expects content in HTML, so add a <br> whereever we have a CR
+    -- Kudos: https://discussions.apple.com/thread/5929457
+    content = content:gsub("\n", "<br>%1")
+    properties = properties .. ", plain text content:\"" .. content .. "\""
   end
   local emailToStr = function(addr) return string.format("{email address:{address:\"%s\"}}", self:escapeApplescriptString(addr)) end
   local tell_cmds = {}
