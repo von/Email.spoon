@@ -119,7 +119,8 @@ function Message.fromFile(path)
         -- Kudos: https://stackoverflow.com/a/19262818/197789
         values[field] = {}
         for addr in string.gmatch(value, '([^,]+)') do
-          table.insert(values[field], addr)
+          -- Trim leading and trailing whitespace when adding
+          table.insert(values[field], addr:match("^%s*(.*)%s*$"))
         end
       else
         values[field] = value
