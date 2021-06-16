@@ -144,25 +144,22 @@ end
 -- flag() {{{ --
 --- Email.Outlook:flag()
 --- Method
---- Flag message for followup
---- Email.Outlook must be the active application
+--- Flag current message
 ---
 --- Parameters:
---- * `when` (optional): a string and one of: `Today`, `Tomorrow`, `This Week`,
----   `Next Week`, `No Due Date`. Default is `Today`
+--- * None
 ---
 --- Returns:
 --- * Nothing
-function Outlook:flag(when)
-  when = when or "Today"
-  self.log.df("Flagging message for followup %s", when)
+function Outlook:flag()
+  self.log.df("Flagging message")
   local outlook = hs.application.find(self.AppId)
   if not outlook then
     self.log.e("Could not find Outlook application")
     return
   end
-  if not outlook:selectMenuItem({"Message", "Follow Up", when}) then
-    self.log.f("Failed to flag message for %s", when)
+  if not outlook:selectMenuItem({"Message", "Flag"}) then
+    self.log.e("Failed to flag to message")
   end
 end
 -- }}} flag() --
@@ -170,8 +167,7 @@ end
 -- clearFlag() {{{ --
 --- Email.Outlook:clearFlag()
 --- Method
---- Clear any flag on message for followup
---- Email.Outlook must be the active application
+--- Unflag message.
 ---
 --- Parameters:
 --- * None
@@ -179,14 +175,14 @@ end
 --- Returns:
 --- * Nothing
 function Outlook:clearFlag(when)
-  self.log.d("Clearing flagging on message for followup")
+  self.log.d("Unflagging message")
   local outlook = hs.application.find(self.AppId)
   if not outlook then
     self.log.e("Could not find Outlook application")
     return
   end
-  if not outlook:selectMenuItem({"Message", "Follow Up", "Clear Flag"}) then
-    self.log.i("Failed to clear flag on message")
+  if not outlook:selectMenuItem({"Message", "Unflag"}) then
+    self.log.e("Failed to unflag to message")
   end
 end
 -- }}} clearFlag() --
