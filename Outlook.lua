@@ -152,7 +152,7 @@ end
 --- Returns:
 --- * Nothing
 function Outlook:flag()
-  self.log.df("Flagging message")
+  self.log.d("Flagging message")
   local outlook = hs.application.find(self.AppId)
   if not outlook then
     self.log.e("Could not find Outlook application")
