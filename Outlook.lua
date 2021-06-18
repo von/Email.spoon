@@ -187,6 +187,35 @@ function Outlook:clearFlag(when)
 end
 -- }}} clearFlag() --
 
+-- snooze() {{{ --
+--- Email.Outlook:snooze()
+--- Method
+--- Snooze current message.
+--- XXX This doesn't work right now because I cannot find the menu item.
+---
+--- Parameters:
+--- * when (optional): Until when to snooze message. Parameter is a string and must
+---   match menu item under "Messages / Snooze". Default is "Tomorrow"
+---
+--- Returns:
+--- * Nothing
+function Outlook:snooze(when)
+  when = when or "Tomorrow"
+  self.log.df("Snooze message until %s", when)
+  local outlook = hs.application.find(self.AppId)
+  if not outlook then
+    self.log.e("Could not find Outlook application")
+    return
+  end
+  -- The Outlook menu for Snoomze (under Message / Snooze) appends the actual date/time
+  -- to the base string, so we need to use a regex.
+  -- XXX I cannot get hammerspoon to find the Snooze menu items...
+  if not outlook:selectMenuItem(when .. " .*", true) then
+    self.log.ef("Failed to snooze message to %s", when)
+  end
+end
+-- }}} snooze() --
+
 -- reply() {{{ --
 --- Email.Outlook:reply()
 --- Method
