@@ -51,6 +51,7 @@ end
 function App.new()
   App.log.d("new() called")
   local self = setmetatable({}, App)
+  self.useHTML = false
   return self
 end
 
@@ -157,6 +158,19 @@ function App:composeFromChooser(path)
   chooser = hs.chooser.new(callback)
   chooser:choices(choices)
   chooser:show()
+end
+
+--- Email.App:useHTMLforCompose()
+--- Method
+--- Set whether or not to use HTML, as opposed to plain text, when composing.
+---
+--- Parameters:
+--- * `flag`: boolean indicating if HTML should be used
+---
+--- Returns:
+--- * Nothing
+function App:useHTMLforCompose(useHTML)
+  self.useHTML = flag
 end
 
 return App
