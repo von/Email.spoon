@@ -136,7 +136,7 @@ function Message.fromFile(path)
   return Message.new(values)
 end
 
---- Message:toURL()
+--- Email.Message:toURL()
 --- Method
 --- Return the mail message as a `mailto:` URL.
 --- Does not support `from` or `attachment`s.
