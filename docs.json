@@ -1,0 +1,1620 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+      "App",
+      "AppleMail",
+      "GMail",
+      "Message",
+      "Outlook"
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "An interface to creating and sending emails and email applications.",
+    "Constructor" : [
+      {
+        "doc" : "Create an interface to Apple Mail.\n\nParameters:\n* None\n\nReturns:\n* Email.AppleMail instance",
+        "stripped_doc" : [
+          "Create an interface to Apple Mail.",
+          ""
+        ],
+        "def" : "Email.AppleMail()",
+        "desc" : "Create an interface to Apple Mail.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail()",
+        "type" : "Constructor",
+        "returns" : [
+          "* Email.AppleMail instance"
+        ],
+        "name" : "AppleMail",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Create an interface to GMail.\n\nParameters:\n* None\n\nReturns:\n* Email.GMail instance",
+        "stripped_doc" : [
+          "Create an interface to GMail.",
+          ""
+        ],
+        "def" : "Email.GMail()",
+        "desc" : "Create an interface to GMail.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.GMail()",
+        "type" : "Constructor",
+        "returns" : [
+          "* Email.GMail instance"
+        ],
+        "name" : "GMail",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Create an interface to Outlook.\n\nParameters:\n* None\n\nReturns:\n* Email.Outlook instance",
+        "stripped_doc" : [
+          "Create an interface to Outlook.",
+          ""
+        ],
+        "def" : "Email.Outlook()",
+        "desc" : "Create an interface to Outlook.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook()",
+        "type" : "Constructor",
+        "returns" : [
+          "* Email.Outlook instance"
+        ],
+        "name" : "Outlook",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      }
+    ],
+    "doc" : "An interface to creating and sending emails and email applications.",
+    "Field" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Create an interface to Apple Mail.\n\nParameters:\n* None\n\nReturns:\n* Email.AppleMail instance",
+        "stripped_doc" : [
+          "Create an interface to Apple Mail.",
+          ""
+        ],
+        "def" : "Email.AppleMail()",
+        "desc" : "Create an interface to Apple Mail.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail()",
+        "type" : "Constructor",
+        "returns" : [
+          "* Email.AppleMail instance"
+        ],
+        "name" : "AppleMail",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Create an interface to GMail.\n\nParameters:\n* None\n\nReturns:\n* Email.GMail instance",
+        "stripped_doc" : [
+          "Create an interface to GMail.",
+          ""
+        ],
+        "def" : "Email.GMail()",
+        "desc" : "Create an interface to GMail.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.GMail()",
+        "type" : "Constructor",
+        "returns" : [
+          "* Email.GMail instance"
+        ],
+        "name" : "GMail",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Create an interface to Outlook.\n\nParameters:\n* None\n\nReturns:\n* Email.Outlook instance",
+        "stripped_doc" : [
+          "Create an interface to Outlook.",
+          ""
+        ],
+        "def" : "Email.Outlook()",
+        "desc" : "Create an interface to Outlook.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook()",
+        "type" : "Constructor",
+        "returns" : [
+          "* Email.Outlook instance"
+        ],
+        "name" : "Outlook",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Enable or disable debugging\n\nParameters:\n* enable: a boolean to indiciate whether debigging should be enabled or disabled\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Enable or disable debugging",
+          ""
+        ],
+        "def" : "Email:debug()",
+        "desc" : "Enable or disable debugging",
+        "notes" : [
+
+        ],
+        "signature" : "Email:debug()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "debug",
+        "parameters" : [
+          "* enable: a boolean to indiciate whether debigging should be enabled or disabled",
+          ""
+        ]
+      }
+    ],
+    "Method" : [
+      {
+        "doc" : "Enable or disable debugging\n\nParameters:\n* enable: a boolean to indiciate whether debigging should be enabled or disabled\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Enable or disable debugging",
+          ""
+        ],
+        "def" : "Email:debug()",
+        "desc" : "Enable or disable debugging",
+        "notes" : [
+
+        ],
+        "signature" : "Email:debug()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "debug",
+        "parameters" : [
+          "* enable: a boolean to indiciate whether debigging should be enabled or disabled",
+          ""
+        ]
+      }
+    ],
+    "name" : "Email"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "An abstract base class for email application interfaces",
+    "Constructor" : [
+
+    ],
+    "doc" : "An abstract base class for email application interfaces",
+    "Field" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Given a path, open a chooser and read from the file selected by the user.\nUse its contents to create an `Email.Message` and then call `compose()`\n\nParameters:\n* `path`: string containing path to directory containing files to offer as options\n\nReturns:\n* `Email.Message` instance",
+        "stripped_doc" : [
+          "Given a path, open a chooser and read from the file selected by the user.",
+          "Use its contents to create an `Email.Message` and then call `compose()`",
+          ""
+        ],
+        "def" : "Email.App:composeFromChooser()",
+        "desc" : "Given a path, open a chooser and read from the file selected by the user.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:composeFromChooser()",
+        "type" : "Method",
+        "returns" : [
+          "* `Email.Message` instance"
+        ],
+        "name" : "composeFromChooser",
+        "parameters" : [
+          "* `path`: string containing path to directory containing files to offer as options",
+          ""
+        ]
+      },
+      {
+        "doc" : "Enable or disable debugging\n\nParameters:\n* enable: a boolean to indiciate whether debigging should be enabled or disabled\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Enable or disable debugging",
+          ""
+        ],
+        "def" : "Email.App:debug()",
+        "desc" : "Enable or disable debugging",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:debug()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "debug",
+        "parameters" : [
+          "* enable: a boolean to indiciate whether debigging should be enabled or disabled",
+          ""
+        ]
+      },
+      {
+        "doc" : "Escape quotes and backslashes in given string for inclusion in Applescript.\n\nParameters:\n* s: String to escape.\n\nReturns:\n* A string appropriate escaped.",
+        "stripped_doc" : [
+          "Escape quotes and backslashes in given string for inclusion in Applescript.",
+          ""
+        ],
+        "def" : "Email.App:escapeApplescriptString()",
+        "desc" : "Escape quotes and backslashes in given string for inclusion in Applescript.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:escapeApplescriptString()",
+        "type" : "Method",
+        "returns" : [
+          "* A string appropriate escaped."
+        ],
+        "name" : "escapeApplescriptString",
+        "parameters" : [
+          "* s: String to escape.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Execute given Applescript.\n\nParameters:\n* script: Applescript as a string\n\nReturns:\n* true on success, false on error",
+        "stripped_doc" : [
+          "Execute given Applescript.",
+          ""
+        ],
+        "def" : "Email.App:executeApplescript()",
+        "desc" : "Execute given Applescript.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:executeApplescript()",
+        "type" : "Method",
+        "returns" : [
+          "* true on success, false on error"
+        ],
+        "name" : "executeApplescript",
+        "parameters" : [
+          "* script: Applescript as a string",
+          ""
+        ]
+      },
+      {
+        "doc" : "Set whether or not to use HTML, as opposed to plain text, when composing.\n\nParameters:\n* `flag`: boolean indicating if HTML should be used\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Set whether or not to use HTML, as opposed to plain text, when composing.",
+          ""
+        ],
+        "def" : "Email.App:useHTMLforCompose()",
+        "desc" : "Set whether or not to use HTML, as opposed to plain text, when composing.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:useHTMLforCompose()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "useHTMLforCompose",
+        "parameters" : [
+          "* `flag`: boolean indicating if HTML should be used",
+          ""
+        ]
+      }
+    ],
+    "Method" : [
+      {
+        "doc" : "Enable or disable debugging\n\nParameters:\n* enable: a boolean to indiciate whether debigging should be enabled or disabled\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Enable or disable debugging",
+          ""
+        ],
+        "def" : "Email.App:debug()",
+        "desc" : "Enable or disable debugging",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:debug()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "debug",
+        "parameters" : [
+          "* enable: a boolean to indiciate whether debigging should be enabled or disabled",
+          ""
+        ]
+      },
+      {
+        "doc" : "Escape quotes and backslashes in given string for inclusion in Applescript.\n\nParameters:\n* s: String to escape.\n\nReturns:\n* A string appropriate escaped.",
+        "stripped_doc" : [
+          "Escape quotes and backslashes in given string for inclusion in Applescript.",
+          ""
+        ],
+        "def" : "Email.App:escapeApplescriptString()",
+        "desc" : "Escape quotes and backslashes in given string for inclusion in Applescript.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:escapeApplescriptString()",
+        "type" : "Method",
+        "returns" : [
+          "* A string appropriate escaped."
+        ],
+        "name" : "escapeApplescriptString",
+        "parameters" : [
+          "* s: String to escape.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Execute given Applescript.\n\nParameters:\n* script: Applescript as a string\n\nReturns:\n* true on success, false on error",
+        "stripped_doc" : [
+          "Execute given Applescript.",
+          ""
+        ],
+        "def" : "Email.App:executeApplescript()",
+        "desc" : "Execute given Applescript.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:executeApplescript()",
+        "type" : "Method",
+        "returns" : [
+          "* true on success, false on error"
+        ],
+        "name" : "executeApplescript",
+        "parameters" : [
+          "* script: Applescript as a string",
+          ""
+        ]
+      },
+      {
+        "doc" : "Given a path, open a chooser and read from the file selected by the user.\nUse its contents to create an `Email.Message` and then call `compose()`\n\nParameters:\n* `path`: string containing path to directory containing files to offer as options\n\nReturns:\n* `Email.Message` instance",
+        "stripped_doc" : [
+          "Given a path, open a chooser and read from the file selected by the user.",
+          "Use its contents to create an `Email.Message` and then call `compose()`",
+          ""
+        ],
+        "def" : "Email.App:composeFromChooser()",
+        "desc" : "Given a path, open a chooser and read from the file selected by the user.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:composeFromChooser()",
+        "type" : "Method",
+        "returns" : [
+          "* `Email.Message` instance"
+        ],
+        "name" : "composeFromChooser",
+        "parameters" : [
+          "* `path`: string containing path to directory containing files to offer as options",
+          ""
+        ]
+      },
+      {
+        "doc" : "Set whether or not to use HTML, as opposed to plain text, when composing.\n\nParameters:\n* `flag`: boolean indicating if HTML should be used\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Set whether or not to use HTML, as opposed to plain text, when composing.",
+          ""
+        ],
+        "def" : "Email.App:useHTMLforCompose()",
+        "desc" : "Set whether or not to use HTML, as opposed to plain text, when composing.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.App:useHTMLforCompose()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "useHTMLforCompose",
+        "parameters" : [
+          "* `flag`: boolean indicating if HTML should be used",
+          ""
+        ]
+      }
+    ],
+    "name" : "Email.App"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "An interface for interfacing to Apple Mail",
+    "Constructor" : [
+      {
+        "doc" : "Create a new interface to AppleMail\n\nParameters:\n* None\n\nReturns:\n* `Email.GMail` instance",
+        "stripped_doc" : [
+          "Create a new interface to AppleMail",
+          ""
+        ],
+        "def" : "Email.AppleMail.new()",
+        "desc" : "Create a new interface to AppleMail",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail.new()",
+        "type" : "Constructor",
+        "returns" : [
+          "* `Email.GMail` instance"
+        ],
+        "name" : "new",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Create a new interface to AppleMail\n\nParameters:\n* None\n\nReturns:\n* `Email.AppleMail` instance",
+        "stripped_doc" : [
+          "Create a new interface to AppleMail",
+          ""
+        ],
+        "def" : "Email.AppleMail.new()",
+        "desc" : "Create a new interface to AppleMail",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail.new()",
+        "type" : "Constructor",
+        "returns" : [
+          "* `Email.AppleMail` instance"
+        ],
+        "name" : "new",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      }
+    ],
+    "doc" : "An interface for interfacing to Apple Mail",
+    "Field" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Create a new interface to AppleMail\n\nParameters:\n* None\n\nReturns:\n* `Email.GMail` instance",
+        "stripped_doc" : [
+          "Create a new interface to AppleMail",
+          ""
+        ],
+        "def" : "Email.AppleMail.new()",
+        "desc" : "Create a new interface to AppleMail",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail.new()",
+        "type" : "Constructor",
+        "returns" : [
+          "* `Email.GMail` instance"
+        ],
+        "name" : "new",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Create a new interface to AppleMail\n\nParameters:\n* None\n\nReturns:\n* `Email.AppleMail` instance",
+        "stripped_doc" : [
+          "Create a new interface to AppleMail",
+          ""
+        ],
+        "def" : "Email.AppleMail.new()",
+        "desc" : "Create a new interface to AppleMail",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail.new()",
+        "type" : "Constructor",
+        "returns" : [
+          "* `Email.AppleMail` instance"
+        ],
+        "name" : "new",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Given an Email.Message instance, create new email composition\nwith its contents.\n\nParameters:\n* `msg`: `Email.Message` instance\n\nReturns:\n* `true` on success, `false` on failure",
+        "stripped_doc" : [
+          "Given an Email.Message instance, create new email composition",
+          "with its contents.",
+          ""
+        ],
+        "def" : "Email.AppleMail:compose()",
+        "desc" : "Given an Email.Message instance, create new email composition",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail:compose()",
+        "type" : "Method",
+        "returns" : [
+          "* `true` on success, `false` on failure"
+        ],
+        "name" : "compose",
+        "parameters" : [
+          "* `msg`: `Email.Message` instance",
+          ""
+        ]
+      },
+      {
+        "doc" : "Move current message to folder\nMail must be the active application\n\nParameters:\n* folder: string with the name of the target folder, which must appear under\n  Message \/ Move To\n\nReturns:\n* true on success, false on failure",
+        "stripped_doc" : [
+          "Move current message to folder",
+          "Mail must be the active application",
+          ""
+        ],
+        "def" : "Email.AppleMail:moveToFolder()",
+        "desc" : "Move current message to folder",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail:moveToFolder()",
+        "type" : "Method",
+        "returns" : [
+          "* true on success, false on failure"
+        ],
+        "name" : "moveToFolder",
+        "parameters" : [
+          "* folder: string with the name of the target folder, which must appear under",
+          "  Message \/ Move To",
+          ""
+        ]
+      }
+    ],
+    "Method" : [
+      {
+        "doc" : "Given an Email.Message instance, create new email composition\nwith its contents.\n\nParameters:\n* `msg`: `Email.Message` instance\n\nReturns:\n* `true` on success, `false` on failure",
+        "stripped_doc" : [
+          "Given an Email.Message instance, create new email composition",
+          "with its contents.",
+          ""
+        ],
+        "def" : "Email.AppleMail:compose()",
+        "desc" : "Given an Email.Message instance, create new email composition",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail:compose()",
+        "type" : "Method",
+        "returns" : [
+          "* `true` on success, `false` on failure"
+        ],
+        "name" : "compose",
+        "parameters" : [
+          "* `msg`: `Email.Message` instance",
+          ""
+        ]
+      },
+      {
+        "doc" : "Move current message to folder\nMail must be the active application\n\nParameters:\n* folder: string with the name of the target folder, which must appear under\n  Message \/ Move To\n\nReturns:\n* true on success, false on failure",
+        "stripped_doc" : [
+          "Move current message to folder",
+          "Mail must be the active application",
+          ""
+        ],
+        "def" : "Email.AppleMail:moveToFolder()",
+        "desc" : "Move current message to folder",
+        "notes" : [
+
+        ],
+        "signature" : "Email.AppleMail:moveToFolder()",
+        "type" : "Method",
+        "returns" : [
+          "* true on success, false on failure"
+        ],
+        "name" : "moveToFolder",
+        "parameters" : [
+          "* folder: string with the name of the target folder, which must appear under",
+          "  Message \/ Move To",
+          ""
+        ]
+      }
+    ],
+    "name" : "Email.AppleMail"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "An interface for GMail",
+    "Constructor" : [
+
+    ],
+    "doc" : "An interface for GMail",
+    "Field" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Given an Email.Message instance, create new email composition\nwith its contents.\n\nParameters:\n* `msg`: `Email.Message` instance\n\nReturns:\n* `true` on success, `false` on failure",
+        "stripped_doc" : [
+          "Given an Email.Message instance, create new email composition",
+          "with its contents.",
+          ""
+        ],
+        "def" : "Email.GMail:compose()",
+        "desc" : "Given an Email.Message instance, create new email composition",
+        "notes" : [
+
+        ],
+        "signature" : "Email.GMail:compose()",
+        "type" : "Method",
+        "returns" : [
+          "* `true` on success, `false` on failure"
+        ],
+        "name" : "compose",
+        "parameters" : [
+          "* `msg`: `Email.Message` instance",
+          ""
+        ]
+      },
+      {
+        "doc" : "Given a url, open it. Uses hs.urlevent.openURL(url).\n\nParameters:\n* `url`: URL to open\n\nReturns:\n* `true` on success, `false` on failure",
+        "stripped_doc" : [
+          "Given a url, open it. Uses hs.urlevent.openURL(url).",
+          ""
+        ],
+        "def" : "Email.GMail:open()",
+        "desc" : "Given a url, open it. Uses hs.urlevent.openURL(url).",
+        "notes" : [
+
+        ],
+        "signature" : "Email.GMail:open()",
+        "type" : "Method",
+        "returns" : [
+          "* `true` on success, `false` on failure"
+        ],
+        "name" : "open",
+        "parameters" : [
+          "* `url`: URL to open",
+          ""
+        ]
+      }
+    ],
+    "Method" : [
+      {
+        "doc" : "Given an Email.Message instance, create new email composition\nwith its contents.\n\nParameters:\n* `msg`: `Email.Message` instance\n\nReturns:\n* `true` on success, `false` on failure",
+        "stripped_doc" : [
+          "Given an Email.Message instance, create new email composition",
+          "with its contents.",
+          ""
+        ],
+        "def" : "Email.GMail:compose()",
+        "desc" : "Given an Email.Message instance, create new email composition",
+        "notes" : [
+
+        ],
+        "signature" : "Email.GMail:compose()",
+        "type" : "Method",
+        "returns" : [
+          "* `true` on success, `false` on failure"
+        ],
+        "name" : "compose",
+        "parameters" : [
+          "* `msg`: `Email.Message` instance",
+          ""
+        ]
+      },
+      {
+        "doc" : "Given a url, open it. Uses hs.urlevent.openURL(url).\n\nParameters:\n* `url`: URL to open\n\nReturns:\n* `true` on success, `false` on failure",
+        "stripped_doc" : [
+          "Given a url, open it. Uses hs.urlevent.openURL(url).",
+          ""
+        ],
+        "def" : "Email.GMail:open()",
+        "desc" : "Given a url, open it. Uses hs.urlevent.openURL(url).",
+        "notes" : [
+
+        ],
+        "signature" : "Email.GMail:open()",
+        "type" : "Method",
+        "returns" : [
+          "* `true` on success, `false` on failure"
+        ],
+        "name" : "open",
+        "parameters" : [
+          "* `url`: URL to open",
+          ""
+        ]
+      }
+    ],
+    "name" : "Email.GMail"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "Wrapper around a dictionary with the following elements:",
+    "Constructor" : [
+      {
+        "doc" : "Create new Email.Message instance.\n\nParameters:\n* `values` (optional): A table containing initial values\n\nReturns:\n* A `Email.Message` instance",
+        "stripped_doc" : [
+          "Create new Email.Message instance.",
+          ""
+        ],
+        "def" : "Email.Message.new()",
+        "desc" : "Create new Email.Message instance.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Message.new()",
+        "type" : "Constructor",
+        "returns" : [
+          "* A `Email.Message` instance"
+        ],
+        "name" : "new",
+        "parameters" : [
+          "* `values` (optional): A table containing initial values",
+          ""
+        ]
+      },
+      {
+        "doc" : "Read an email from a file. File format should be zero or more lines of headers,\nfollowed by a blank line, followed by zero or more lines of content.\n\nParameters:\n* `path`: string with path to file\n\nReturns:\n* `Email.Message` instance, or `nil` on error",
+        "stripped_doc" : [
+          "Read an email from a file. File format should be zero or more lines of headers,",
+          "followed by a blank line, followed by zero or more lines of content.",
+          ""
+        ],
+        "def" : "Email.Message.fromFile()",
+        "desc" : "Read an email from a file. File format should be zero or more lines of headers,",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Message.fromFile()",
+        "type" : "Constructor",
+        "returns" : [
+          "* `Email.Message` instance, or `nil` on error"
+        ],
+        "name" : "fromFile",
+        "parameters" : [
+          "* `path`: string with path to file",
+          ""
+        ]
+      }
+    ],
+    "doc" : "Interface to an email message.\nWrapper around a dictionary with the following elements:\n * `from`: a string with an email address\n * `to`: a list of strings with recipients\n * `cc`: a list of strings with cc recipients\n * `bcc`: a list of strings with bcc recipients\n * `subject`: a string containing the email subject\n * `content`: a string containing the email content\n * `attachment`: a list of strings with paths to files",
+    "Field" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Read an email from a file. File format should be zero or more lines of headers,\nfollowed by a blank line, followed by zero or more lines of content.\n\nParameters:\n* `path`: string with path to file\n\nReturns:\n* `Email.Message` instance, or `nil` on error",
+        "stripped_doc" : [
+          "Read an email from a file. File format should be zero or more lines of headers,",
+          "followed by a blank line, followed by zero or more lines of content.",
+          ""
+        ],
+        "def" : "Email.Message.fromFile()",
+        "desc" : "Read an email from a file. File format should be zero or more lines of headers,",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Message.fromFile()",
+        "type" : "Constructor",
+        "returns" : [
+          "* `Email.Message` instance, or `nil` on error"
+        ],
+        "name" : "fromFile",
+        "parameters" : [
+          "* `path`: string with path to file",
+          ""
+        ]
+      },
+      {
+        "doc" : "Create new Email.Message instance.\n\nParameters:\n* `values` (optional): A table containing initial values\n\nReturns:\n* A `Email.Message` instance",
+        "stripped_doc" : [
+          "Create new Email.Message instance.",
+          ""
+        ],
+        "def" : "Email.Message.new()",
+        "desc" : "Create new Email.Message instance.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Message.new()",
+        "type" : "Constructor",
+        "returns" : [
+          "* A `Email.Message` instance"
+        ],
+        "name" : "new",
+        "parameters" : [
+          "* `values` (optional): A table containing initial values",
+          ""
+        ]
+      },
+      {
+        "doc" : "Enable or disable debugging\n\nParameters:\n* enable: a boolean to indiciate whether debigging should be enabled or disabled\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Enable or disable debugging",
+          ""
+        ],
+        "def" : "Email.Message:debug()",
+        "desc" : "Enable or disable debugging",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Message:debug()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "debug",
+        "parameters" : [
+          "* enable: a boolean to indiciate whether debigging should be enabled or disabled",
+          ""
+        ]
+      },
+      {
+        "doc" : "Return the mail message as a `mailto:` URL.\nDoes not support `from` or `attachment`s.\n\nParameters:\n* None\n\nReturns:\n* URL as a string",
+        "stripped_doc" : [
+          "Return the mail message as a `mailto:` URL.",
+          "Does not support `from` or `attachment`s.",
+          ""
+        ],
+        "def" : "Email.Message:toURL()",
+        "desc" : "Return the mail message as a `mailto:` URL.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Message:toURL()",
+        "type" : "Method",
+        "returns" : [
+          "* URL as a string"
+        ],
+        "name" : "toURL",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      }
+    ],
+    "Method" : [
+      {
+        "doc" : "Enable or disable debugging\n\nParameters:\n* enable: a boolean to indiciate whether debigging should be enabled or disabled\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Enable or disable debugging",
+          ""
+        ],
+        "def" : "Email.Message:debug()",
+        "desc" : "Enable or disable debugging",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Message:debug()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "debug",
+        "parameters" : [
+          "* enable: a boolean to indiciate whether debigging should be enabled or disabled",
+          ""
+        ]
+      },
+      {
+        "doc" : "Return the mail message as a `mailto:` URL.\nDoes not support `from` or `attachment`s.\n\nParameters:\n* None\n\nReturns:\n* URL as a string",
+        "stripped_doc" : [
+          "Return the mail message as a `mailto:` URL.",
+          "Does not support `from` or `attachment`s.",
+          ""
+        ],
+        "def" : "Email.Message:toURL()",
+        "desc" : "Return the mail message as a `mailto:` URL.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Message:toURL()",
+        "type" : "Method",
+        "returns" : [
+          "* URL as a string"
+        ],
+        "name" : "toURL",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      }
+    ],
+    "name" : "Email.Message"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "Class for interfacing to Microsoft Outlook",
+    "Constructor" : [
+      {
+        "doc" : "Create a new instance of an Outlook interface.\n\nParameters:\n* None\n\nReturns:\n* Email.Outlook instance",
+        "stripped_doc" : [
+          "Create a new instance of an Outlook interface.",
+          ""
+        ],
+        "def" : "Email.Outlook.new()",
+        "desc" : "Create a new instance of an Outlook interface.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook.new()",
+        "type" : "Constructor",
+        "returns" : [
+          "* Email.Outlook instance"
+        ],
+        "name" : "new",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      }
+    ],
+    "doc" : "Class for interfacing to Microsoft Outlook",
+    "Field" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Create a new instance of an Outlook interface.\n\nParameters:\n* None\n\nReturns:\n* Email.Outlook instance",
+        "stripped_doc" : [
+          "Create a new instance of an Outlook interface.",
+          ""
+        ],
+        "def" : "Email.Outlook.new()",
+        "desc" : "Create a new instance of an Outlook interface.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook.new()",
+        "type" : "Constructor",
+        "returns" : [
+          "* Email.Outlook instance"
+        ],
+        "name" : "new",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Unflag message.\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Unflag message.",
+          ""
+        ],
+        "def" : "Email.Outlook:clearFlag()",
+        "desc" : "Unflag message.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:clearFlag()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "clearFlag",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Given an Email.Message instance, create new email comosition\nwith its contents.\n\nParameters:\n* msg: Email.Message instance\n\nReturns:\n* true on success, false on failure",
+        "stripped_doc" : [
+          "Given an Email.Message instance, create new email comosition",
+          "with its contents.",
+          ""
+        ],
+        "def" : "Email.Outlook:compose()",
+        "desc" : "Given an Email.Message instance, create new email comosition",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:compose()",
+        "type" : "Method",
+        "returns" : [
+          "* true on success, false on failure"
+        ],
+        "name" : "compose",
+        "parameters" : [
+          "* msg: Email.Message instance",
+          ""
+        ]
+      },
+      {
+        "doc" : "Delete current message\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Delete current message",
+          ""
+        ],
+        "def" : "Email.Outlook:delete()",
+        "desc" : "Delete current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:delete()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "delete",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Flag current message\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Flag current message",
+          ""
+        ],
+        "def" : "Email.Outlook:flag()",
+        "desc" : "Flag current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:flag()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "flag",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Focus on the calendar window.\n\nParameters:\n* None\n\nReturns:\n* True on success, false on failure",
+        "stripped_doc" : [
+          "Focus on the calendar window.",
+          ""
+        ],
+        "def" : "Email.Outlook:focusOnCalendar()",
+        "desc" : "Focus on the calendar window.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:focusOnCalendar()",
+        "type" : "Method",
+        "returns" : [
+          "* True on success, false on failure"
+        ],
+        "name" : "focusOnCalendar",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Forward current message\nEmail.Outlook must be the active application\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Forward current message",
+          "Email.Outlook must be the active application",
+          ""
+        ],
+        "def" : "Email.Outlook:forward()",
+        "desc" : "Forward current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:forward()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "forward",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Move current message to archive\nUses Outlook's existing ^E shortcut\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Move current message to archive",
+          "Uses Outlook's existing ^E shortcut",
+          ""
+        ],
+        "def" : "Email.Outlook:moveToArchive()",
+        "desc" : "Move current message to archive",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:moveToArchive()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "moveToArchive",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Move current message to folder\nMail must be the active application\n\nParameters:\n* `folder`: string with the name of the target folder, which must appear under\n  `Message \/ Move To`\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Move current message to folder",
+          "Mail must be the active application",
+          ""
+        ],
+        "def" : "Email.Outlook:moveToFolder()",
+        "desc" : "Move current message to folder",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:moveToFolder()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "moveToFolder",
+        "parameters" : [
+          "* `folder`: string with the name of the target folder, which must appear under",
+          "  `Message \/ Move To`",
+          ""
+        ]
+      },
+      {
+        "doc" : "Reply to current message\nEmail.Outlook must be the active application\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Reply to current message",
+          "Email.Outlook must be the active application",
+          ""
+        ],
+        "def" : "Email.Outlook:reply()",
+        "desc" : "Reply to current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:reply()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "reply",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Reply-all to current message\nEmail.Outlook must be the active application\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Reply-all to current message",
+          "Email.Outlook must be the active application",
+          ""
+        ],
+        "def" : "Email.Outlook:replyAll()",
+        "desc" : "Reply-all to current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:replyAll()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "replyAll",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Snooze current message.\nXXX This doesn't work right now because I cannot find the menu item.\n\nParameters:\n* when (optional): Until when to snooze message. Parameter is a string and must\n  match menu item under \"Messages \/ Snooze\". Default is \"Tomorrow\"\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Snooze current message.",
+          "XXX This doesn't work right now because I cannot find the menu item.",
+          ""
+        ],
+        "def" : "Email.Outlook:snooze()",
+        "desc" : "Snooze current message.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:snooze()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "snooze",
+        "parameters" : [
+          "* when (optional): Until when to snooze message. Parameter is a string and must",
+          "  match menu item under \"Messages \/ Snooze\". Default is \"Tomorrow\"",
+          ""
+        ]
+      }
+    ],
+    "Method" : [
+      {
+        "doc" : "Given an Email.Message instance, create new email comosition\nwith its contents.\n\nParameters:\n* msg: Email.Message instance\n\nReturns:\n* true on success, false on failure",
+        "stripped_doc" : [
+          "Given an Email.Message instance, create new email comosition",
+          "with its contents.",
+          ""
+        ],
+        "def" : "Email.Outlook:compose()",
+        "desc" : "Given an Email.Message instance, create new email comosition",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:compose()",
+        "type" : "Method",
+        "returns" : [
+          "* true on success, false on failure"
+        ],
+        "name" : "compose",
+        "parameters" : [
+          "* msg: Email.Message instance",
+          ""
+        ]
+      },
+      {
+        "doc" : "Move current message to archive\nUses Outlook's existing ^E shortcut\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Move current message to archive",
+          "Uses Outlook's existing ^E shortcut",
+          ""
+        ],
+        "def" : "Email.Outlook:moveToArchive()",
+        "desc" : "Move current message to archive",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:moveToArchive()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "moveToArchive",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Move current message to folder\nMail must be the active application\n\nParameters:\n* `folder`: string with the name of the target folder, which must appear under\n  `Message \/ Move To`\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Move current message to folder",
+          "Mail must be the active application",
+          ""
+        ],
+        "def" : "Email.Outlook:moveToFolder()",
+        "desc" : "Move current message to folder",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:moveToFolder()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "moveToFolder",
+        "parameters" : [
+          "* `folder`: string with the name of the target folder, which must appear under",
+          "  `Message \/ Move To`",
+          ""
+        ]
+      },
+      {
+        "doc" : "Flag current message\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Flag current message",
+          ""
+        ],
+        "def" : "Email.Outlook:flag()",
+        "desc" : "Flag current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:flag()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "flag",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Unflag message.\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Unflag message.",
+          ""
+        ],
+        "def" : "Email.Outlook:clearFlag()",
+        "desc" : "Unflag message.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:clearFlag()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "clearFlag",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Snooze current message.\nXXX This doesn't work right now because I cannot find the menu item.\n\nParameters:\n* when (optional): Until when to snooze message. Parameter is a string and must\n  match menu item under \"Messages \/ Snooze\". Default is \"Tomorrow\"\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Snooze current message.",
+          "XXX This doesn't work right now because I cannot find the menu item.",
+          ""
+        ],
+        "def" : "Email.Outlook:snooze()",
+        "desc" : "Snooze current message.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:snooze()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "snooze",
+        "parameters" : [
+          "* when (optional): Until when to snooze message. Parameter is a string and must",
+          "  match menu item under \"Messages \/ Snooze\". Default is \"Tomorrow\"",
+          ""
+        ]
+      },
+      {
+        "doc" : "Reply to current message\nEmail.Outlook must be the active application\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Reply to current message",
+          "Email.Outlook must be the active application",
+          ""
+        ],
+        "def" : "Email.Outlook:reply()",
+        "desc" : "Reply to current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:reply()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "reply",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Reply-all to current message\nEmail.Outlook must be the active application\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Reply-all to current message",
+          "Email.Outlook must be the active application",
+          ""
+        ],
+        "def" : "Email.Outlook:replyAll()",
+        "desc" : "Reply-all to current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:replyAll()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "replyAll",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Forward current message\nEmail.Outlook must be the active application\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Forward current message",
+          "Email.Outlook must be the active application",
+          ""
+        ],
+        "def" : "Email.Outlook:forward()",
+        "desc" : "Forward current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:forward()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "forward",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Delete current message\n\nParameters:\n* None\n\nReturns:\n* Nothing",
+        "stripped_doc" : [
+          "Delete current message",
+          ""
+        ],
+        "def" : "Email.Outlook:delete()",
+        "desc" : "Delete current message",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:delete()",
+        "type" : "Method",
+        "returns" : [
+          "* Nothing"
+        ],
+        "name" : "delete",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Focus on the calendar window.\n\nParameters:\n* None\n\nReturns:\n* True on success, false on failure",
+        "stripped_doc" : [
+          "Focus on the calendar window.",
+          ""
+        ],
+        "def" : "Email.Outlook:focusOnCalendar()",
+        "desc" : "Focus on the calendar window.",
+        "notes" : [
+
+        ],
+        "signature" : "Email.Outlook:focusOnCalendar()",
+        "type" : "Method",
+        "returns" : [
+          "* True on success, false on failure"
+        ],
+        "name" : "focusOnCalendar",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      }
+    ],
+    "name" : "Email.Outlook"
+  }
+]
