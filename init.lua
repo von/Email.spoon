@@ -51,6 +51,19 @@ function Email.AppleMail()
   return dofile(hs.spoons.resourcePath("AppleMail.lua")).new()
 end
 
+--- Email.GMail()
+--- Constructor
+--- Create an interface to GMail.
+---
+--- Parameters:
+--- * None
+---
+--- Returns:
+--- * Email.GMail instance
+function Email.GMail()
+  return dofile(hs.spoons.resourcePath("GMail.lua")).new()
+end
+
 --- Email.Outlook()
 --- Constructor
 --- Create an interface to Outlook.
