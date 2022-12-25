@@ -117,12 +117,13 @@ end
 --- * `path`: string containing path to directory containing files to offer as options
 ---
 --- Returns:
---- * `Email.Message` instance
+--- * `Email.Message` instance or nil on error (displaying hs.alert)
 function App:composeFromChooser(path)
-  local iter, data = hs.fs.dir(path)
-  if iter == nil then
-    self.log.ef("Cannot read path: %s", path)
-    return false
+  local status, err = pcall(function() hs.fs.dir(path) end)
+  if not status then
+    self.log.ef("Cannot read path: %s", err)
+    hs.alert("Cannot read " .. path)
+    return nil
   end
   local choices = {}
   for file in hs.fs.dir(path) do
