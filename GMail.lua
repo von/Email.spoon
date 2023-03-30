@@ -94,7 +94,11 @@ end
 --- * `true` on success, `false` on failure
 function GMail:open(url)
   self.log.df("GMail:open(%s) called.", url)
-  return hs.urlevent.openURL(url)
+  local rc = hs.urlevent.openURL(url)
+  if not rc then
+    self.log.ef("Failed to open URL: %s", url)
+  end
+  return rc
 end
 
 return GMail
