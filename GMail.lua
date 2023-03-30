@@ -62,13 +62,13 @@ function GMail:compose(mail)
   -- Create URL. Kudos: https://stackoverflow.com/a/8852679/197789
   local url = "https://mail.google.com/mail/?view=cm&fs=1"
   if mail.to then
-    url = url .. "&to=" .. mail.to
+    url = url .. "&to=" .. table.concat(mail.to, ",")
   end
   if mail.cc then
-    url = url .. "&cc=" .. mail.cc
+    url = url .. "&cc=" .. table.concat(mail.cc, ",")
   end
   if mail.bcc then
-    url = url .. "&bcc=" .. mail.bcc
+    url = url .. "&bcc=" .. table.concat(mail.bcc, ",")
   end
   -- TODO: handle mail.from
   if mail.subject then
