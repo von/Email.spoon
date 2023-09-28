@@ -52,6 +52,9 @@ function App.new()
   App.log.d("new() called")
   local self = setmetatable({}, App)
   self.useHTML = false
+  -- Path to last template chosen
+  -- Set by composeFromChooser() and used by composeLastTemplate()
+  self.lastTemplatePath = nil
   return self
 end
 
@@ -151,6 +154,7 @@ function App:composeFromChooser(path)
       log.d("User canceled template selection")
     end
     local email = Message.fromFile(info.path)
+    self.lastTemplatePath = info.path
     if email then
       self:compose(email)
     end
@@ -159,6 +163,27 @@ function App:composeFromChooser(path)
   chooser = hs.chooser.new(callback)
   chooser:choices(choices)
   chooser:show()
+end
+
+--- Email.App:composeLastTemplate()
+--- Method
+--- Compose an email using the last path choosen by `composeFromChooser()'
+---
+--- Parameters:
+--- * None
+---
+--- Returns:
+--- * Nothing
+function App:composeLastTemplate()
+  if self.lastTemplatePath then
+    local email = Message.fromFile(self.lastTemplatePath)
+    if email then
+      self:compose(email)
+    end
+  else
+    self.log.e("No last template")
+    hs.alert("No template previosly selected.")
+  end
 end
 
 --- Email.App:useHTMLforCompose()
