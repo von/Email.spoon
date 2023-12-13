@@ -152,6 +152,7 @@ function App:composeFromChooser(path)
   local callback = function(info)
     if not info then
       self.log.d("User canceled template selection")
+      return
     end
     local email = Message.fromFile(info.path)
     self.lastTemplatePath = info.path
