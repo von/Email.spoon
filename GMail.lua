@@ -32,7 +32,7 @@ local function urlencode(url)
 end
 -- }}} urlencode()
 
---- Email.AppleMail.new()
+--- Email.GMail.new()
 --- Constructor
 --- Create a new interface to AppleMail
 ---
